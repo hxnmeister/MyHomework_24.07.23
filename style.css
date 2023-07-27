@@ -35,6 +35,8 @@ input[type="text"], input[type="number"]
 input[type="text"]:focus
 {
     outline: none;
+    width: 10vw;
+    padding: 5px;
     background-color: azure;
 }
 input[type="number"]
