@@ -1,0 +1,60 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    background-color: antiquewhite;
+}
+form, #characters-allowed-options
+{
+    display: inline-block;
+    margin: 15px 0;
+}
+input[type="submit"]
+{
+    padding: 5px 40px;
+    background-color: gray;
+    color: white;
+    border-radius: 7px;
+    border: none;
+
+    transition: background-color, border-radius, box-shadow, 0.2s ease 0s;
+}
+input[type="submit"]:hover
+{
+    background-color:  green;
+    border-radius: 10px;
+    box-shadow: 2px 2px 7px rgb(29, 29, 29);
+}
+input[type="text"], input[type="number"]
+{
+    background-color: white;
+    padding: 3px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+input[type="text"]:focus
+{
+    outline: none;
+    background-color: azure;
+}
+input[type="number"]
+{
+    width: 2vw;
+}
+input[name="characters-allowed"]
+{
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+#random-string-generator, #result-section, .separator
+{
+    width: 18vw;
+    margin: 10px auto;
+}
+
+.separator
+{
+    height: 0.1px;
+    background-color: gray;
+}
