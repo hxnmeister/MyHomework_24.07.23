@@ -1,4 +1,5 @@
 const form = document.forms.namedItem("random-options");
+const recentActions = document.getElementById("history");
 const randomStringLength = form.querySelector("#string-length");
 const charactersAllowed = form.querySelectorAll('[name="characters-allowed"]');
 const resultBox = document.getElementById("result-section").querySelector('[type="text"]');
@@ -7,6 +8,7 @@ form.addEventListener("submit", (event) =>
 {
     event.preventDefault();
 
+    resultBox.value = "";
     const stringLength = Number(randomStringLength.value);
     const choosedOptions = Array.from(charactersAllowed).filter(value => value.checked);
 
@@ -23,7 +25,6 @@ form.addEventListener("submit", (event) =>
         else if(choosedOptions.length !== 0 && stringLength > 0)
         {
             let stringForRandom = "";
-            resultBox.value = "";
 
             choosedOptions.map(option => 
             {
@@ -47,7 +48,8 @@ form.addEventListener("submit", (event) =>
                 
                 resultBox.value += stringForRandom[randomIndex];
             }
-
+            
+            !recentActions.innerHTML.includes(resultBox.value) && (recentActions.innerHTML += `<p>${resultBox.value}</p>`);
         }
     }
     catch(e)

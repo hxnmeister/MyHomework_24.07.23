@@ -47,10 +47,28 @@ input[name="characters-allowed"]
     margin-left: 10px;
 }
 
-#random-string-generator, #result-section, .separator
+#random-string-generator, #result-section, #history, .separator
 {
     width: 18vw;
     margin: 10px auto;
+}
+#history
+{
+    width: 15vw;
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20px;
+}
+#history > p
+{
+    color: white;
+    margin-bottom: 5px;
+}
+#history, #history > p
+{
+    background-color: gray;
 }
 
 .separator
